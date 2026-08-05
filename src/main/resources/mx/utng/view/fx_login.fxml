@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="420" prefWidth="500" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.utng.controller.LoginController">
+    <center>
+        <VBox alignment="CENTER" spacing="15">
+            <padding>
+                <Insets bottom="30" left="40" right="40" top="30" />
+            </padding>
+            <Label text="📚">
+                <font>
+                    <Font size="52" />
+                </font>
+            </Label>
+            <Label text="BIBLIOTECA">
+                <font>
+                    <Font size="26" />
+                </font>
+            </Label>
+            <Label text="Sistema de Gestión Bibliotecaria" />
+            <Separator />
+            <GridPane hgap="10" vgap="15">
+                <Label text="Usuario:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="txtUsuario" promptText="Usuario" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <PasswordField fx:id="txtPassword" promptText="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <columnConstraints>
+               <ColumnConstraints />
+               <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints />
+               <RowConstraints />
+            </rowConstraints>
+            </GridPane>
+            <CheckBox fx:id="chkRecordar" text="Recordarme" />
+            <Button fx:id="btnIngresar" onAction="#ingresar" prefWidth="180" text="Ingresar" />
+            <Label fx:id="lblMensaje" />
+        </VBox>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_RIGHT">
+            <padding>
+                <Insets bottom="10" left="15" right="15" top="10" />
+            </padding>
+            <Label text="Versión 1.0" />
+        </HBox>
+    </bottom>
+</BorderPane>
